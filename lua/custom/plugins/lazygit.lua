@@ -17,6 +17,6 @@ return {
     require('telescope').load_extension 'lazygit'
   end,
   keys = {
-    { '<leader>gg', '<cmd>LazyGit<cr>', desc = 'Invoke LazyGit' },
+    { '<leader>gg', '<cmd> wa <bar> LazyGit<cr>', desc = 'Invoke LazyGit after writing all.' },
   },
 }
