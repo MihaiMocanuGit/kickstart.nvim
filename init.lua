@@ -598,7 +598,23 @@ require('lazy').setup({
       --  See `:help lsp-config` for information about keys and how to configure
       ---@type table<string, vim.lsp.Config>
       local servers = {
-        clangd = {},
+        clangd = {
+          cmd = {
+            -- https://github.com/williamboman/nvim-lsp-installer/discussions/392
+            'clangd',
+            '--background-index',
+            '-j=12',
+            '--query-driver=/usr/bin/**/clang-*,/bin/clang,/bin/clang++,/usr/bin/gcc,/usr/bin/g++',
+            '--clang-tidy',
+            '--clang-tidy-checks=*',
+            '--all-scopes-completion',
+            '--cross-file-rename',
+            '--completion-style=detailed',
+            '--header-insertion-decorators',
+            '--header-insertion=iwyu',
+            '--pch-storage=memory',
+          },
+        },
         -- gopls = {},
         -- pyright = {},
         -- rust_analyzer = {},
@@ -929,7 +945,7 @@ require('lazy').setup({
   --
   -- require 'kickstart.plugins.debug',
   require 'kickstart.plugins.indent_line',
-  -- require 'kickstart.plugins.lint',
+  require 'kickstart.plugins.lint',
   -- require 'kickstart.plugins.autopairs',
   require 'kickstart.plugins.neo-tree',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommended keymaps
