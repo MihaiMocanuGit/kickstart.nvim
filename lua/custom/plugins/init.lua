@@ -2,7 +2,17 @@
 --  I promise not to create any merge conflicts in this directory :)
 --
 -- See the kickstart.nvim README for more information
-
 ---@module 'lazy'
 ---@type LazySpec
-return {}
+return {
+  {
+    'williamboman/mason.nvim',
+    opts = {
+      ensure_installed = {
+        'clangd',
+        'clang-format',
+        'codelldb',
+      },
+    },
+  },
+}
