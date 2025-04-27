@@ -10,6 +10,7 @@ return {
         'clangd',
         'clang-format',
         'codelldb',
+        'cmakelint',
       },
     },
   },
