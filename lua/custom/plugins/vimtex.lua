@@ -6,6 +6,17 @@ return {
     -- VimTeX configuration goes here, e.g.
     vim.g.vimtex_view_method = 'zathura'
     vim.g.vimtex_syntax_enabled = 0
+
+    -- Add shell-escape for TikZ externalization
+    vim.g.vimtex_compiler_latexmk = {
+      options = {
+        '-shell-escape',
+        '-verbose',
+        '-file-line-error',
+        '-synctex=1',
+        '-interaction=nonstopmode',
+      },
+    }
   end,
 }
 -- NOTE: Install zathura, Zathura-pdf-mupdf (+ tesseract-data-en).
