@@ -15,6 +15,8 @@ return {
         '-file-line-error',
         '-synctex=1',
         '-interaction=nonstopmode',
+        '-outdir=build',
+        '-auxdir=build',
       },
     }
   end,
