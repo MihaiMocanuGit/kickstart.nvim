@@ -7,8 +7,10 @@ return {
     vim.g.vimtex_view_method = 'zathura'
     vim.g.vimtex_syntax_enabled = 0
 
-    -- Add shell-escape for TikZ externalization
     vim.g.vimtex_compiler_latexmk = {
+      aux_dir = 'build',
+      out_dir = 'build',
+      -- Add shell-escape for TikZ externalization
       options = {
         '-shell-escape',
         '-verbose',
