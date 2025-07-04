@@ -98,6 +98,13 @@ vim.g.have_nerd_font = true
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
 
+-- Set tab to 4 characters
+vim.o.tabstop = 4
+vim.o.shiftwidth = 4
+
+-- Always convert tab to spaces
+vim.o.expandtab = true
+
 -- Make line numbers default
 vim.o.number = true
 vim.o.relativenumber = true
@@ -559,6 +566,8 @@ require('lazy').setup({
           --  This is where a variable was first declared, or where a function is defined, etc.
           --  To jump back, press <C-t>.
           map('grd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
+
+          map('gsh', '<cmd> LspClangdSwitchSourceHeader <cr>', '[G]oto [S]ource<->[H]eader')
 
           -- WARN: This is not Goto Definition, this is Goto Declaration.
           --  For example, in C this would take you to the header.
