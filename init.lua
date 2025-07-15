@@ -215,7 +215,7 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 
 -- CUSTOM KEYMAPS
 -- Create new terminal window
-vim.keymap.set('n', '<leader>nt', '<cmd> new <bar> term <CR> i', { desc = 'Create [N]ew [T]erminal window' })
+vim.keymap.set('n', '<leader>nt', '<cmd> new <bar> term <CR> <C-w>15-i', { desc = 'Create [N]ew [T]erminal window' })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
