@@ -9,7 +9,7 @@ return {
       ensure_installed = {
         'clangd',
         'clang-format',
-        'codelldb',
+        'lldb-dap',
         'cmakelint',
       },
     },
