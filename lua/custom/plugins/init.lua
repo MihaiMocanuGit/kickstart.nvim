@@ -12,7 +12,6 @@ return {
         'clangd',
         'clang-format',
         'lldb-dap',
-        'cmakelint',
       },
     },
   },
